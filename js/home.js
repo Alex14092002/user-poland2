@@ -155,27 +155,24 @@
     for (const [key, value] of Object.entries(product)) {
       if(value != null){
         services.innerHTML += `
-        <div class="product-item col-6 col-md-3">
-        <div class="product-mini">
-            <a href="../detail-product.html?id=${key}&id_catelory=najlepsza_wyprzedaz">
-                <div class="img-product">
-                    <img src="${value.img1}" alt="" width="100%">
+        <div class="col-6 col-md-4 mb-4">
+        <div class="card">
+            <img class="card-img-top" src="${value.img1}" alt="" />
+            <div class="card-body">
+                <p class="name-detail"><small class="text-muted"></small></br>${value.name}</p>
+                
+                <div class="price-detail">
+                <p class=" m-0">${value.price} Złoty netto</p>
+                <p class="end-price m-0">(${value.price2} Złoty netto)</p> 
                 </div>
-            </a>
-            
-            <div class="name-product">
-                <h2>${value.name}</h2>
-            </div>
-            <div class="price-product">
-                <h2>$${value.price} Złoty</h2>
             </div>
             <div class="btn-add-cart">
                 <a  href="../detail-product.html?id=${key}&id_catelory=najlepsza_wyprzedaz" >Patrz szczegóły</a>
             </div>
-
         </div>
-        
-    </div>   
+    </div>
+
+    
         `;
       }
      

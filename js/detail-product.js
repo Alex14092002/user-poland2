@@ -55,7 +55,11 @@
         <div class="item-detail col-12 col-md-6" id="content-product">
             <h1>${product.name}</h1>
             <p>${product.describe}</p>
-            <h3>${product.price} Złoty</h3>
+            <div class="price-detail">
+            <h3>${product.price} Złoty netto</h3>
+            <h3>(${product.price2}Złoty brutto)</h3>
+            </div>
+           
 
             <div class="quantity speacial-quantity">
             <div class="btn-quantity">

@@ -442,6 +442,7 @@ nav .navbar .links li:hover .js-sub-menu {
     padding: 7px 0;
     border-radius: 20px;
     font-size: 16px;
+    text-decoration: none;
 }
 
 .btn-add-cart button:hover,
@@ -839,7 +840,33 @@ button {
     font-size: 17px;
     font-weight: 600;
 }
+.price-detail{ 
+    display: flex;
+    justify-content: space-around;
+}
+.price-detail p{
+    font-weight: 600;
+    font-size: 18px;
+}
+.category-main{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0px 12px;
+}
+.end-price{
+    border-left: 1px solid #000;
+    padding-left: 5px;
+}.name-detail{
+    font-size: 16px;
+    font-weight: 600;
+}
 @media screen and (max-width: 768px) {
+   .category-second{
+    display: none;
+   }
+   .price-detail p{
+    font-size: 10px;
+   }
     .btn-amout input {
         width: 22% !important;
     }
@@ -882,6 +909,7 @@ button {
     }
     .btn-add-cart a {
         font-size: 12px;
+        
     }
     .number-cart h5 {
         font-size: 2rem;

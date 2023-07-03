@@ -3,38 +3,701 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
     <title>Document</title>
 </head>
-
-<style>
-    .main{
-        display: flex;
-       
-    }
-    .item{
-        width: 19%;
-        padding: 10px 0.5%;
-    }
-</style>
 <body>
-    
-    <div class="main">
-        <div class="item">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1" alt="" width="100%">
+   
+   
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <div class="card-header">Categories</div>
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action">Desktops (13)</a>
+                        <a href="#" class="list-group-item list-group-item-action active">Laptops &amp; Notebooks (5)</a>
+                        <a href="#" class="list-group-item list-group-item-action">&nbsp;&nbsp;&nbsp;- Macs (0)</a>
+                        <a href="#" class="list-group-item list-group-item-action">&nbsp;&nbsp;&nbsp;- Windows (0)</a>
+                        <a href="#" class="list-group-item list-group-item-action">Components (2)</a>
+                        <a href="#" class="list-group-item list-group-item-action">Tablets (1)</a>
+                        <a href="#" class="list-group-item list-group-item-action">Software (0)</a>
+                        <a href="#" class="list-group-item list-group-item-action">Phones &amp; PDAs (3)</a>
+                        <a href="#" class="list-group-item list-group-item-action">Cameras (2)</a>
+                        <a href="#" class="list-group-item list-group-item-action">MP3 Players (4)</a>
+                    </div>
+                </div>
+             
+            </div>
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-secondary active"><i class="fas fa-th"></i></button>
+                                    <button type="button" class="btn btn-secondary"><i class="fas fa-th-list"></i></button>
+                                    <button type="button" class="btn btn-secondary">
+                                        <i class="fas fa-sync-alt"></i>
+                                        <span>Product Compare (0)</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Sort By:</span>
+                                    </div>
+                                    <select class="form-control" id="" name="">
+                                        <option value="">Default</option>
+                                        <option value="">Name (A - Z)</option>
+                                        <option value="">Name (Z - A)</option>
+                                        <option value="">Price (Low &gt; High)</option>
+                                        <option value="">Price (High &gt; Low)</option>
+                                        <option value="">Rating (Highest)</option>
+                                        <option value="">Rating (Lowest)</option>
+                                        <option value="">Model (A - Z)</option>
+                                        <option value="">Model (Z - A)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Show:</span>
+                                    </div>
+                                    <select class="form-control" id="" name="">
+                                        <option value="">15</option>
+                                        <option value="">25</option>
+                                        <option value="">50</option>
+                                        <option value="">75</option>
+                                        <option value="">100</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00 <s class="lead text-muted">$943.00</s></p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00 <s class="lead text-muted">$943.00</s></p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00 <s class="lead text-muted">$943.00</s></p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted">Apple</small></br>Butterflies Hand composite</p>
+                        <p class="m-0">
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                            <i class="fa-xs far fa-star"></i>
+                        </p>
+                        <p class="h5 m-0">$782.00 <s class="lead text-muted">$943.00</s></p>
+                    </div>
+                    <div class="card-footer p-0">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add Cart</span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="item">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1" alt="" width="100%">
+                    </div>
+                    <div class="card-footer p-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="pagination m-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-right mb-0 mt-1">Showing 1 to 12 of 12 (1 Pages)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="item">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1" alt="" width="100%">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <i class="float-left mr-3 fa-3x fas fa-shipping-fast"></i>
+                                <p class="h6">Free shipping & Return <br/><small class="text-muted">For all orders over $500</small></p>
+                            </div>
+                            <div class="col-md-3">
+                                <i class="float-left mr-3 fa-3x fas fa-thumbs-up"></i>
+                                <p class="h6">Customer Protection <br/><small class="text-muted">From click to delivery.</small></p>
+                            </div>
+                            <div class="col-md-3">
+                                <i class="float-left mr-3 fa-3x fas fa-umbrella"></i>
+                                <p class="h6">Safe Payment <br/><small class="text-muted">Use world’s most secure payment methods.</small></p>
+                            </div>
+                            <div class="col-md-3">
+                                <i class="float-left mr-3 fa-3x fas fa-life-ring"></i>
+                                <p class="h6">Support 24/7 <br/><small class="text-muted">We answer for question all time</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="item">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1" alt="" width="100%">
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="lead">We’ll never share your email address with a third-party.</p>
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Sign Up For Newsletter</span>
+                            </div>
+                            <input type="text" id="" name="" class="form-control" placeholder="Your email address" />
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="item">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1" alt="" width="100%">
+    </div>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-header">Corporate</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item p-2">About Us</li>
+                        <li class="list-group-item p-2">Company Profile</li>
+                        <li class="list-group-item p-2">Blog</li>
+                        <li class="list-group-item p-2">Site Maps</li>
+                        <li class="list-group-item p-2">Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-header">Services</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item p-2">Discounts</li>
+                        <li class="list-group-item p-2">Campaigns</li>
+                        <li class="list-group-item p-2">Brands</li>
+                        <li class="list-group-item p-2">Gift Certificates</li>
+                        <li class="list-group-item p-2">Returns</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-header">Account</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item p-2">Sign In</li>
+                        <li class="list-group-item p-2">Sign up</li>
+                        <li class="list-group-item p-2">My Account</li>
+                        <li class="list-group-item p-2">Order History</li>
+                        <li class="list-group-item p-2">Wish List</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-header">Support</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item p-2">FAQ</li>
+                        <li class="list-group-item p-2">Ticket</li>
+                        <li class="list-group-item p-2">Feedback</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Contact Us</div>
+                    <div class="card-body">
+                        <p>We are a team of designers and developers that create high quality Magento, Prestashop, Opencart.</p>
+                        <p class="m-0"><strong>Address</strong></p>
+                        <p>4710-4890 Breckinridge St, UK Burlington, VT 05401</p>
+                        <p class="m-0"><strong>Need Help?</strong></p>
+                        <p>Call: 1-800-345-6789</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-5 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-2x fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-2x fab fa-twitter"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-2x fab fa-instagram"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-2x fab fa-google-plus-g"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-2x fab fa-youtube"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-2x fab fa-pinterest"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-2x fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Terms & Conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Site Map</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <p class="text-center">Copyright © 2019 Your Store All Right Reserved.</p>
+            </div>
+            <div class="col-md-4">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-cc-diners-club"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-cc-amex"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-cc-discover"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-cc-jcb"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-cc-mastercard"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-cc-paypal"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-cc-visa"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
+
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>
