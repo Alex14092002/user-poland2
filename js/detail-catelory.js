@@ -29,7 +29,7 @@
                     <h2>${value.name}</h2>
                 </div>
                 <div class="price-product">
-                    <h2>${value.price} Złoty</h2>
+                    <h2>${value.price} zł</h2>
                 </div>
                 <div class="btn-add-cart">
                     <a href="../detail-product.html?id=${key}&id_catelory=${id_catoley}">Patrz szczegóły</a>

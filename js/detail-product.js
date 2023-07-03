@@ -56,8 +56,8 @@
             <h1>${product.name}</h1>
             <p>${product.describe}</p>
             <div class="price-detail">
-            <h3>${product.price} Złoty netto</h3>
-            <h3>(${product.price2}Złoty brutto)</h3>
+            <h3>${product.price} zł netto</h3>
+            <h3>(${product.price2}zł brutto)</h3>
             </div>
            
 

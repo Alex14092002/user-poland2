@@ -162,8 +162,8 @@
                 <p class="name-detail"><small class="text-muted"></small></br>${value.name}</p>
                 
                 <div class="price-detail">
-                <p class=" m-0">${value.price} Złoty netto</p>
-                <p class="end-price m-0">(${value.price2} Złoty netto)</p> 
+                <p class=" m-0">${value.price} zł netto</p>
+                <p class="end-price m-0">(${value.price2} zł brutto)</p> 
                 </div>
             </div>
             <div class="btn-add-cart">
@@ -207,7 +207,7 @@
                 <h2>${value.name}</h2>
             </div>
             <div class="price-product">
-                <h2>$${value.price} Złoty</h2>
+                <h2>$${value.price} zł</h2>
             </div>
             <div class="btn-add-cart">
                 <a  href="./detail-hand.html?id=${key}" >VIEWS DETAILS</a>

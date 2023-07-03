@@ -31,7 +31,7 @@ if (cart != null && cart.length > 0) {
       
     </div>
     <div class="item-cart-main col-3">
-        <h2>${value.price} Złoty</h2>
+        <h2>${value.price} zł</h2>
     </div>   
     <div class="item-cart-main col-2">
         <button onclick="deleteCart(${value.id})"><i class="fa fa-times" aria-hidden="true"></i>
@@ -79,7 +79,7 @@ if (cart != null && cart.length > 0) {
        
     <div class="sumPrice"> 
     <h1>
-    Całkowita kwota pieniędzy : <strong> ${sum} Złoty</strong>
+    Całkowita kwota pieniędzy : <strong> ${sum} zł</strong>
 </h1>
     </div>
 
