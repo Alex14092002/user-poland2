@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="btn-add-cart">
-                        <a  href="../detail-product.html?id=${key}&id_catelory=najlepsza_wyprzedaz" >Patrz szczegóły</a>
+                        <a  href="../detail-product.html?id=${key}&id_catelory=${id_catoley}" >Patrz szczegóły</a>
                     </div>
                 </div>
             </div>

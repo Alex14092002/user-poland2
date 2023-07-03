@@ -8,7 +8,7 @@
   const product = await res.json();
 
   const detail = document.querySelector('#detail');
-
+  console.log(product);
   if (product) {
     detail.innerHTML += `
     <div class="main-detail row " >
@@ -87,7 +87,7 @@
     giohang(
       product.id,
       product.name,
-      product.price,
+      product.price2,
       product.img1,
       valquantity.value,
       "none",

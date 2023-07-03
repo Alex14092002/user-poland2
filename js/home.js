@@ -144,7 +144,7 @@
 
 (async () => {
   const res = await fetch(
-    `https://db-ecomer-pola-default-rtdb.firebaseio.com/najlepsza_wyprzedaz.json`
+    `https://db-ecomer-pola-default-rtdb.firebaseio.com/patelnia.json`
   );
 
   const product = await res.json();
@@ -167,7 +167,7 @@
                 </div>
             </div>
             <div class="btn-add-cart">
-                <a  href="../detail-product.html?id=${key}&id_catelory=najlepsza_wyprzedaz" >Patrz szczegóły</a>
+                <a  href="../detail-product.html?id=${key}&id_catelory=patelnia" >Patrz szczegóły</a>
             </div>
         </div>
     </div>

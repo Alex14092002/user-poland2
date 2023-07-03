@@ -14,7 +14,7 @@ const deleteCart = (id) => {
 };
 
 var cart = JSON.parse(localStorage.getItem("cart"));
-
+console.log(cart);
 const formCustomer = document.querySelector(".info-customer");
 var sum = 0;
 
