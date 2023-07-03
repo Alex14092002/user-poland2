@@ -155,7 +155,7 @@
     for (const [key, value] of Object.entries(product)) {
       if(value != null){
         services.innerHTML += `
-        <div class="col-6 col-md-4 mb-4">
+        <div class="col-6 col-md-3 mb-4">
         <div class="card">
             <img class="card-img-top" src="${value.img1}" alt="" />
             <div class="card-body">

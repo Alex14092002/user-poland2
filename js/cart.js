@@ -27,7 +27,7 @@ if (cart != null && cart.length > 0) {
     </div>
     <div class="item-cart-main col-4 col-md-3">
         <h3>${value.name}</h3>
-
+        <h2>Ilość :${value.quantity}</h2>
       
     </div>
     <div class="item-cart-main col-3">

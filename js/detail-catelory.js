@@ -16,28 +16,22 @@
         for (const [key, value] of Object.entries(product)) {
             if(value != null){
                 services.innerHTML += `
-            <div class="product-item col-6 col-md-3">
-            <div class="product-mini">
-                <a href="../detail-product.html?id_catelory=${id_catoley}&id=${key}">
-                    <div class="img-product">
-                        <img src="${value.img1}" alt="${value.img1}" width="100%">
+                <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="${value.img1}" alt="" />
+                    <div class="card-body">
+                        <p class="name-detail"><small class="text-muted"></small></br>${value.name}</p>
+                        
+                        <div class="price-detail">
+                        <p class=" m-0">${value.price} zł netto</p>
+                        <p class="end-price m-0">(${value.price2} zł brutto)</p> 
+                        </div>
                     </div>
-                </a>
-              
-                
-                <div class="name-product">
-                    <h2>${value.name}</h2>
+                    <div class="btn-add-cart">
+                        <a  href="../detail-product.html?id=${key}&id_catelory=najlepsza_wyprzedaz" >Patrz szczegóły</a>
+                    </div>
                 </div>
-                <div class="price-product">
-                    <h2>${value.price} zł</h2>
-                </div>
-                <div class="btn-add-cart">
-                    <a href="../detail-product.html?id=${key}&id_catelory=${id_catoley}">Patrz szczegóły</a>
-                </div>
-
             </div>
-            
-        </div>   
             `
             }
             

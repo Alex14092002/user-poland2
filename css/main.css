@@ -257,6 +257,7 @@ nav .navbar .links li:hover .js-sub-menu {
 .content-total h5{
     font-weight: 600;
     text-align: center;
+    font-size: 18px;
 }
 @media (max-width:800px) {
     .item-cart-main img {
@@ -846,7 +847,7 @@ button {
 }
 .price-detail p{
     font-weight: 600;
-    font-size: 18px;
+    font-size: 15px;
 }
 .category-main{
     margin-left: 0;
@@ -858,6 +859,11 @@ button {
     padding-left: 5px;
 }.name-detail{
     font-size: 16px;
+    font-weight: 600;
+}
+.card-header{
+    text-transform: uppercase;
+    text-align: center;
     font-weight: 600;
 }
 @media screen and (max-width: 768px) {
