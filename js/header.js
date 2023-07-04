@@ -95,6 +95,7 @@ header.innerHTML += `
           </ul>
         </li>
         <li><a href="../detail-catolery.html?catolery=najlepsza_wyprzedaz">Najlepsza wyprzedaz</a></li>
+        <li><a href="../about.html">O nas</a></li>
       </ul>
     </div>
     <div class="booking">

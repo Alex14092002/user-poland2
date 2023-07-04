@@ -70,6 +70,7 @@ if (cart != null && cart.length > 0) {
             <label for="">Uwaga Zamówienie</label> 
             <input type="text" name="" id="noteOrder" placeholder="Wprowadź kolejność notatek" >
         </div>
+    
         </div>
         <div class="btn-pushData">
             <button id="btn-push">Zamów teraz</button>
@@ -79,7 +80,7 @@ if (cart != null && cart.length > 0) {
        
     <div class="sumPrice"> 
     <h1>
-    Całkowita kwota pieniędzy : <strong> ${sum} zł</strong>
+    Całkowita kwota zamówienia z podatkiem : <strong> ${sum * 1.23} zł</strong>
 </h1>
     </div>
 
@@ -104,6 +105,7 @@ btnPush.addEventListener("click", () => {
   const address = document.querySelector("#address").value;
   const phoneNumber = document.querySelector("#phoneNumber").value;
   const noteOrder = document.querySelector('#noteOrder').value;
+
   const cartItems = JSON.parse(localStorage.getItem("cart"));
   const status = "Delivering";
   // Tạo đối tượng khách hàng
@@ -114,8 +116,12 @@ btnPush.addEventListener("click", () => {
     address: address,
     phoneNumber: phoneNumber,
     cartItems: cartItems,
+    noteOrder: noteOrder,
+    
     total: sum,
   };
+
+
 
   // Gửi dữ liệu khách hàng đến máy chủ
   fetch("https://db-ecomer-pola-default-rtdb.firebaseio.com/customer.json", {
@@ -131,8 +137,8 @@ btnPush.addEventListener("click", () => {
 
       // Display success notification
       Swal.fire(
-        "Powodzenie",
-        "Twoje zamówienie zostało zrealizowane, skontaktujemy się z Tobą w celu dostarczenia",
+        "Dziękuję za Twoje zamówienie",
+        "To są nasze informacje bankowe zachęcające do zapłaty . KONTO BANKOWE: 51 1240 1503 1111 0011 1065 1719 ",
         "success"
       ).then(() => {
         window.location.href = "index.html"; // Chuyển hướng đến trang login
@@ -146,7 +152,7 @@ btnPush.addEventListener("click", () => {
       document.querySelector("#address").value = "";
       document.querySelector("#phoneNumber").value = "";
       document.querySelector('#noteOrder').value = "";
-      
+      document.querySelector('#kodpłatności').value = ""
     })
     .catch((error) => {
       console.error(error); // Xử lý lỗi

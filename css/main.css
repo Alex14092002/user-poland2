@@ -254,6 +254,16 @@ nav .navbar .links li:hover .js-sub-menu {
 .content-total{
     padding: 20px 0px;
 }
+.getBtn{
+    text-align: center;
+    padding: 10px 30px;
+    background-color: #1E90FF;
+    color: #fff;
+    text-decoration: none;
+}
+.getBtn:hover{
+    color: #fff;
+}
 .content-total h5{
     font-weight: 600;
     text-align: center;
