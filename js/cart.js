@@ -14,9 +14,10 @@ const deleteCart = (id) => {
 };
 
 var cart = JSON.parse(localStorage.getItem("cart"));
-console.log(cart);
+console.log(cart.length);
 const formCustomer = document.querySelector(".info-customer");
 var sum = 0;
+var vanchuyen = 45
 
 if (cart != null && cart.length > 0) {
   cart.map((value) => {
@@ -79,8 +80,9 @@ if (cart != null && cart.length > 0) {
   document.querySelector("#cart-main").innerHTML += `
        
     <div class="sumPrice"> 
+    <h5>Opłata transportowa: <strong>${vanchuyen} zł</strong></h5>
     <h1>
-    Całkowita kwota zamówienia z podatkiem : <strong> ${sum * 1.23} zł</strong>
+    Całkowita kwota zamówienia z podatkiem : <strong> ${sum * 1.23 + vanchuyen} zł</strong>
 </h1>
     </div>
 
@@ -121,7 +123,7 @@ btnPush.addEventListener("click", () => {
     total: sum,
   };
 
-  if(cart.length > 5){
+  if(cart.length >= 5){
     fetch("https://db-ecomer-pola-default-rtdb.firebaseio.com/customer.json", {
       method: "POST",
       headers: {
