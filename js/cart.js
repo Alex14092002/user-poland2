@@ -121,40 +121,45 @@ btnPush.addEventListener("click", () => {
     total: sum,
   };
 
-
-
-  // Gửi dữ liệu khách hàng đến máy chủ
-  fetch("https://db-ecomer-pola-default-rtdb.firebaseio.com/customer.json", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(customer),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data); // Xử lý phản hồi từ máy chủ
-
-      // Display success notification
-      Swal.fire(
-        "Dziękuję za Twoje zamówienie",
-        "To są nasze informacje bankowe zachęcające do zapłaty . KONTO BANKOWE: 51 1240 1503 1111 0011 1065 1719 ",
-        "success"
-      ).then(() => {
-        window.location.href = "index.html"; // Chuyển hướng đến trang login
-      });
-  
-          // Clear shopping cart in local storage
-      localStorage.removeItem("cart");
-      // Clear input values
-      document.querySelector("#firstName").value = "";
-      document.querySelector("#lastName").value = "";
-      document.querySelector("#address").value = "";
-      document.querySelector("#phoneNumber").value = "";
-      document.querySelector('#noteOrder').value = "";
-      document.querySelector('#kodpłatności').value = ""
+  if(cart.length > 5){
+    fetch("https://db-ecomer-pola-default-rtdb.firebaseio.com/customer.json", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(customer),
     })
-    .catch((error) => {
-      console.error(error); // Xử lý lỗi
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data); // Xử lý phản hồi từ máy chủ
+  
+        // Display success notification
+        Swal.fire(
+          "Dziękuję za Twoje zamówienie",
+          "To są nasze informacje bankowe zachęcające do zapłaty . KONTO BANKOWE: 51 1240 1503 1111 0011 1065 1719 ",
+          "success"
+        ).then(() => {
+          window.location.href = "index.html"; // Chuyển hướng đến trang login
+        });
+    
+            // Clear shopping cart in local storage
+        localStorage.removeItem("cart");
+        // Clear input values
+        document.querySelector("#firstName").value = "";
+        document.querySelector("#lastName").value = "";
+        document.querySelector("#address").value = "";
+        document.querySelector("#phoneNumber").value = "";
+        document.querySelector('#noteOrder').value = "";
+        document.querySelector('#kodpłatności').value = ""
+      })
+      .catch((error) => {
+        console.error(error); // Xử lý lỗi
+      });
+  } else {
+    Swal.fire(
+      "Nielegalny",
+      "Musi mieć co najmniej 5 produktów lub więcej, aby zamówić ",
+      "error"
+    )
+  }
 });
