@@ -17,6 +17,7 @@
     const getProductsByPage = async (page) => {
       const res = await fetch(`https://db-ecomer-pola-default-rtdb.firebaseio.com/${id_catoley}.json`);
       const products = await res.json();
+      console.log(products);
       totalProducts = Object.entries(products).length;
       const startIndex = (page - 1) * productsPerPage;
       const endIndex = startIndex + productsPerPage;
@@ -57,6 +58,7 @@
 
       // Hiển thị phân trang
       const pagination = document.querySelector('.pagination');
+      console.log(pagination);
       pagination.innerHTML = '';
 
       const totalPages = Math.ceil(totalProducts / productsPerPage);
