@@ -46,16 +46,16 @@ if (cart != null && cart.length > 0) {
 
   formCustomer.innerHTML += `
       <div class="row layout-form">
-            <div class="input-item col-12 col-md-6">
+            <div class="input-item col-12 ">
                 <label for="">Imię</label> 
                 <input type="text" name="" id="firstName" placeholder="Wpisz swoje imię" value="">
             </div>
-            <div class="input-item col-12 col-md-6">
+            <div class="input-item col-12 ">
                 <label for="">Nazwisko</label> 
                 <input type="text" name="" id="lastName" placeholder="Wpisz swoje nazwisko">
             </div>
            
-            <div class="input-item col-12 col-md-6">
+            <div class="input-item col-12 ">
                 <label for="">Adres</label> 
                 <input type="text" name="" id="address" placeholder="Podaj adres ">
             </div>
@@ -63,7 +63,7 @@ if (cart != null && cart.length > 0) {
            
            
           
-            <div class="input-item col-12 col-md-6">
+            <div class="input-item col-12 ">
                 <label for="">Numer telefonu</label> 
                 <input type="number" name="" id="phoneNumber" placeholder="Wpisz numer telefonu" >
             </div>

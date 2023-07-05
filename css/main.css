@@ -269,6 +269,39 @@ nav .navbar .links li:hover .js-sub-menu {
     text-align: center;
     font-size: 18px;
 }
+/* CSS for the "Xem thêm" text on hover */
+.card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card .card-img-top {
+    transition: transform 0.3s ease;
+  }
+  
+  .card .view-details {
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    padding: 8px;
+    transform: translateY(100%);
+    text-align: center;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .card:hover .card-img-top {
+    transform: scale(1.05);
+  }
+  
+  .card:hover .view-details {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
 @media (max-width:800px) {
     .item-cart-main img {
         width: 70%;
@@ -414,8 +447,7 @@ nav .navbar .links li:hover .js-sub-menu {
 .products-for-pedicures,
 .products-for-lash {
     padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    
     padding-bottom: 20px;
 }
 
@@ -455,12 +487,20 @@ nav .navbar .links li:hover .js-sub-menu {
     font-size: 16px;
     text-decoration: none;
 }
-
-.btn-add-cart button:hover,
+.btn-add-cart a{
+    color: #000 !important;
+    background-color: #fff !important;
+    border: 1px solid #000;
+}
 .btn-add-cart a:hover {
-    background-color: #ffffff;
-    color: #000000 !important;
-    border: #000000 solid 2px;
+    background-color: #000 !important;
+    color: #fff !important;
+    border: #000 solid 2px;
+}
+.btn-add-cart button:hover{
+    background-color: #fff;
+    color: #000 !important;
+    border: #000 solid 2px;
 }
 
 .name-product {
@@ -876,6 +916,55 @@ button {
     text-align: center;
     font-weight: 600;
 }
+.item-product a{
+    color: #000;
+    text-decoration: none;
+}
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination a,
+  .pagination span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10%;
+    
+    margin: 0 4px;
+    color: #446084;
+    background-color: #fff;
+    border:#446084 1px solid;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+  
+  .pagination a:hover {
+    background-color: #446084;
+    color: #fff;
+  }
+  
+  .pagination .active {
+    background-color: #446084;
+    color: #fff;
+    pointer-events: none;
+  }
+  
+  .pagination .disabled {
+    pointer-events: none;
+    background-color: #ccc;
+    color: #666;
+  }
+  .info-customer{
+    border:  1px solid #446084;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
 @media screen and (max-width: 768px) {
    .category-second{
     display: none;
