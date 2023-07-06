@@ -42,7 +42,7 @@
       <img
         width="100%"
         height="700px"
-        src="${dataMain.img4}"
+        src="../image/bannr2.jpg"
         alt="slider-home"
       />
     </div>
@@ -51,7 +51,7 @@
       <img
         width="100%"
         height="700px"
-        src="${dataMain.img5}"
+        src="../image/banner3.jpg"
         alt="slider-home"
       />
     </div>

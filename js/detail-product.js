@@ -71,12 +71,12 @@
   const valQuantity = document.querySelector("#valquantity");
 
   btnQuantityIncrease.addEventListener("click", () => {
-    valQuantity.value = parseInt(valQuantity.value) + 4;
+    valQuantity.value = parseInt(valQuantity.value) + 1;
   });
 
   btnQuantityDecrease.addEventListener("click", () => {
     if (parseInt(valQuantity.value) > 4) {
-      valQuantity.value = parseInt(valQuantity.value) - 4;
+      valQuantity.value = parseInt(valQuantity.value) - 1;
     }
   });
 
@@ -90,9 +90,7 @@
       product.price2,
       product.img1,
       valquantity.value,
-      "none",
-      "none",
-      "none"
+      product.price
     );
   });
 

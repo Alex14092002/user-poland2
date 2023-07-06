@@ -4,7 +4,7 @@ var cart = JSON.parse(localStorage.getItem("cart")) || [];
 
  // khởi tạo 1 cái item tên cart trong localstorarge với kiểu là mảng rỗng
 
-function giohang(id, ten, gia, hinh , quantity ,  ){
+function giohang(id, ten, gia, hinh , quantity , gia2  ){
   var found = false; // biến để tìm kiếm
   
   for (var i = 0; i < cart.length; i++) {
@@ -21,6 +21,7 @@ function giohang(id, ten, gia, hinh , quantity ,  ){
       name:ten,
       price:gia * quantity,
       Singleprice : gia,
+      price2 : gia2 * quantity,
       img1:hinh,
       quantity: quantity
     });
@@ -39,6 +40,9 @@ function giohang(id, ten, gia, hinh , quantity ,  ){
 const header = document.querySelector('#header')
 
 header.innerHTML += `
+<div class="header-top ">
+        <h1>Przy zamówieniach powyżej 1000 zł (netto) dostawa gratis oraz logo gratis</h1>
+      </div>
 <nav>
   <div class="navbar">
     <i class="bx bx-menu"></i>

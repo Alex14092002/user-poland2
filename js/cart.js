@@ -17,7 +17,7 @@ var cart = JSON.parse(localStorage.getItem("cart"));
 console.log(cart.length);
 const formCustomer = document.querySelector(".info-customer");
 var sum = 0;
-var vanchuyen = 45
+var vanchuyen 
 
 if (cart != null && cart.length > 0) {
   cart.map((value) => {
@@ -77,6 +77,11 @@ if (cart != null && cart.length > 0) {
             <button id="btn-push">Zamów teraz</button>
         </div>
     `;
+    if(sum >= 1000){
+      vanchuyen = 0
+    }else{
+      vanchuyen = 40
+    }
   document.querySelector("#cart-main").innerHTML += `
        
     <div class="sumPrice"> 
@@ -123,8 +128,7 @@ btnPush.addEventListener("click", () => {
     total: sum,
   };
 
-  if(cart.length >= 5){
-    fetch("https://db-ecomer-pola-default-rtdb.firebaseio.com/customer.json", {
+  fetch("https://db-ecomer-pola-default-rtdb.firebaseio.com/customer.json", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -138,7 +142,7 @@ btnPush.addEventListener("click", () => {
         // Display success notification
         Swal.fire(
           "Dziękuję za Twoje zamówienie",
-          "To są nasze informacje bankowe zachęcające do zapłaty . KONTO BANKOWE: 51 1240 1503 1111 0011 1065 1719 ",
+          "Dziękujemy za zamówienie, prosimy o wpłatę na nasze konto z treścią `nazwa twojego zamówienia`. Oto numer naszego konta KONTO BANKOWE: 51 1240 1503 1111 0011 1065 1719",
           "success"
         ).then(() => {
           window.location.href = "index.html"; // Chuyển hướng đến trang login
@@ -157,11 +161,4 @@ btnPush.addEventListener("click", () => {
       .catch((error) => {
         console.error(error); // Xử lý lỗi
       });
-  } else {
-    Swal.fire(
-      "Nielegalny",
-      "Musi mieć co najmniej 5 produktów lub więcej, aby zamówić ",
-      "error"
-    )
-  }
 });
