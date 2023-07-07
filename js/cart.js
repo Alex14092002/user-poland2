@@ -87,7 +87,7 @@ if (cart != null && cart.length > 0) {
     <div class="sumPrice"> 
     <h5>Opłata transportowa: <strong>${vanchuyen} zł</strong></h5>
     <h1>
-    Całkowita kwota zamówienia z podatkiem : <strong> ${sum * 1.23 + vanchuyen} zł</strong>
+    Całkowita kwota zamówienia z podatkiem : <strong> ${sum  + vanchuyen} zł</strong>
 </h1>
     </div>
 
