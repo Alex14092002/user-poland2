@@ -87,6 +87,7 @@ header.innerHTML += `
             <li><a href="../detail-catolery.html?catolery=nozycki">Nozycki</a></li>
             <li><a href="../detail-catolery.html?catolery=zabawka">Zabawka</a></li>
             <li><a href="../detail-catolery.html?catolery=akcesorie">Akcesorie</a></li>
+            <li><a href="../detail-catolery.html?catolery=gaz">Gaz</a></li>
           </ul>
         </li>
         <li>
