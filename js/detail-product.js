@@ -49,17 +49,23 @@
           <h3>${product.price} zł netto</h3>
           <h3>(${product.price2}zł brutto)</h3>
         </div>
+        <div class="detail-type">
         <div class="quantity speacial-quantity">
-          <div class="btn-quantity">
-            <button id="tru">-</button>
-          </div>
-          <div class="valQuantity">
-            <input type="text" value="4" id="valquantity" />
-          </div>
-          <div class="btn-quantity">
-            <button id="cong">+</button>
-          </div>
+        <div class="btn-quantity">
+          <button id="tru">-</button>
         </div>
+        <div class="valQuantity">
+          <input type="text" value="4" id="valquantity" />
+        </div>
+        <div class="btn-quantity">
+          <button id="cong">+</button>
+        </div>
+      </div>
+      <div class=type>
+        <h3>Jednostka : ${product.type}</h3>
+      </div>
+        </div>
+      
         <button class="addtoCart">Dodaj do koszyka</button>
       </div>
     </div>

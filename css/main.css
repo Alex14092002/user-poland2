@@ -278,6 +278,9 @@ nav .navbar .links li:hover .js-sub-menu {
   .card .card-img-top {
     transition: transform 0.3s ease;
   }
+  .card-img-top{
+    height: 250px !important;
+  }
   
   .card .view-details {
     position: absolute;
@@ -301,7 +304,11 @@ nav .navbar .links li:hover .js-sub-menu {
     transform: translateY(0);
     opacity: 1;
   }
-  
+.detail-type{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}  
 @media (max-width:800px) {
     .item-cart-main img {
         width: 70%;
@@ -1283,9 +1290,14 @@ input[type=number]::-webkit-outer-spin-button {
     width: 40px;
     padding: 0px 10px;
 }
-
-.speacial-quantity {
-    margin-bottom: 30px;
+.row-sp{
+    padding: 0px 6px;
+}
+.home-content h2{
+    font-weight: 600;
+}
+.home-content{
+    padding: 0px 12px;
 }
 #cong , #tru{
     border-radius: 10px;
