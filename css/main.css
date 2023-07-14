@@ -1086,11 +1086,7 @@ button {
     .text-km h2 span{
         font-size: 20px;
     }
-    .search-input{
-        top: 100%;
-        width: 100%;
-        left: 0;
-    }
+    
     .price-detail{
         display: block;
         text-align: center;
