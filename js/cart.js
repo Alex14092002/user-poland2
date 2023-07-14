@@ -82,6 +82,7 @@ if (cart != null && cart.length > 0) {
     }else{
       vanchuyen = 40
     }
+    console.log(sum + vanchuyen);
   document.querySelector("#cart-main").innerHTML += `
        
     <div class="sumPrice"> 

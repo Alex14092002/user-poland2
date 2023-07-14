@@ -5,10 +5,14 @@
   let id_catelory = params.get('id_catelory');
 
   const res = await fetch(`https://db-ecomer-pola-default-rtdb.firebaseio.com/${id_catelory}/${id_item}.json`);
+  const response = await fetch(`https://db-ecomer-pola-default-rtdb.firebaseio.com/${id_catelory}.json`)
+  const lienquan = await response.json()
+  console.log(lienquan);
   const product = await res.json();
-
+  const productLq = document.querySelector('#splienquan')
+  console.log(productLq);
   const detail = document.querySelector('#detail');
-  console.log(product);
+
   if (product) {
     detail.innerHTML += `
     <div class="main-detail row " >
@@ -72,6 +76,35 @@
     `;
   }
 
+  for (const key in lienquan) {
+    const value = lienquan[key];
+    console.log(value);
+      if(value != null && key != id_item){
+        productLq.innerHTML += `
+        <div class="col-6 col-md-2 mb-4">
+        <div class="card">
+        <a href="../detail-product.html?id=${key}&id_catelory=${id_catelory}">
+          <img class="card-img-top" src="${value.img1}" alt="Product Image" />
+          <div class="view-details">Zobacz więcej</div>
+        </a>
+        <div class="card-body">
+          <p class="name-detail"><small class="text-muted"></small></br>${value.name}</p>
+          <div class="price-detail">
+            <p class="m-0">${value.price} zł netto</p>
+            <p class="end-price m-0">(${value.price2} zł brutto)</p> 
+          </div>
+        </div>
+        <div class="btn-add-cart">
+          <a href="../detail-product.html?id=${key}&id_catelory=${id_catelory}">Patrz szczegóły</a>
+        </div>
+      </div>
+    </div>
+        `
+      }
+     
+    }
+   
+  
   const btnQuantityDecrease = document.querySelector("#tru");
   const btnQuantityIncrease = document.querySelector("#cong");
   const valQuantity = document.querySelector("#valquantity");
@@ -140,4 +173,11 @@
     setCurrent(currentIndex);
   });
 
+
+
+ 
 })();
+
+
+
+

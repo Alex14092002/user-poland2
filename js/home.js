@@ -15,8 +15,8 @@
       <img
         width="100%"
         height="700px"
-        src="${dataMain.img1}"
-        alt "${dataMain.img1}"
+        src="/image/home1.jpg"
+        alt ""
       />
     </div>
     <div class="slide" data-slideIndex="1">
@@ -24,7 +24,7 @@
       <img
         width="100%"
         height="700px"
-        src="${dataMain.img2}"
+        src="/image/home2.png"
         alt="slider-home"
       />
     </div>
@@ -33,7 +33,7 @@
       <img
         width="100%"
         height="700px"
-        src="${dataMain.img3}"
+        src="/image/61004a0ce4a4f52c6ce5362d28cb98dfbaa13385_juliexpress.com (3).png"
         alt="slider-home"
       />
     </div>
@@ -42,7 +42,7 @@
       <img
         width="100%"
         height="700px"
-        src="../image/bannr2.jpg"
+        src="../image/home4.png"
         alt="slider-home"
       />
     </div>
@@ -51,7 +51,7 @@
       <img
         width="100%"
         height="700px"
-        src="../image/banner3.jpg"
+        src="../image/home5.png"
         alt="slider-home"
       />
     </div>

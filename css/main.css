@@ -51,6 +51,10 @@ a.numberzalo img {
 
 .item-cart-main h3 {
     font-size: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px; /* Số ký tự tối đa muốn hiển thị */
 }
 
 .item-cart-main h2 {
@@ -68,8 +72,43 @@ nav {
     background-color: #ffffff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     z-index: 99;
+    position: relative;
+}
+.search-input{
+    position: absolute;
+    top: 20%;
+    z-index: 10000;
+    left: 20%;
+    width: 69%;
+    
+    opacity: 0;
+    animation-name: fadeInOut;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .search-input.active-search {
+    animation-name: fadeInOutReverse;
+  }
+  
+  @keyframes fadeInOutReverse {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+.active-search{
+    display: none;
+}
+.search-input input:focus{
+    outline-style:double;
+}
 nav .navbar {
     height: 100%;
    
@@ -198,6 +237,12 @@ nav .navbar .links li:hover .js-sub-menu {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.product{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 .navbar .search-box .input-box {
     position: absolute;
@@ -234,6 +279,14 @@ nav .navbar .links li:hover .js-sub-menu {
     font-size: 18px;
     font-weight: bold;
 }
+.btn-search{
+    background-color: #fff;
+    border: none;
+   
+}
+.btn-search i{
+    font-size: 25px;
+}
 
 @media (max-width:920px) {
     nav .navbar {
@@ -249,6 +302,12 @@ nav .navbar .links li:hover .js-sub-menu {
     }
     nav .navbar .links li a {
         font-size: 15px;
+    }
+    .booking{
+        order: 1;
+    }
+    .search{
+        order: 0;
     }
 }
 .content-total{
@@ -309,6 +368,11 @@ nav .navbar .links li:hover .js-sub-menu {
     align-items: center;
     justify-content: space-around;
 }  
+.img-pttt{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
 @media (max-width:800px) {
     .item-cart-main img {
         width: 70%;
@@ -913,19 +977,45 @@ button {
 }
 .price-detail p{
     font-weight: 600;
-    font-size: 15px;
+    font-size: 12px;
 }
 .category-main{
     margin-left: 0;
     margin-right: 0;
     padding: 0px 12px;
 }
+.title-lienquan{
+    padding: 10px 0px;
+    font-weight: 600;
+    
+}
+    
 .end-price{
     border-left: 1px solid #000;
     padding-left: 5px;
 }.name-detail{
     font-size: 16px;
+    text-align: center;
     font-weight: 600;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px; /* Số ký tự tối đa muốn hiển thị */
+}
+.banner-1000zl{
+    position: relative;
+}
+.text-km{
+    
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: #fff;
+}
+.text-km h2 span{
+    font-weight: 600;
+    font-size: 35px;
 }
 .card-header{
     text-transform: uppercase;
@@ -981,7 +1071,42 @@ button {
     border-radius: 10px;
     margin-bottom: 20px;
   }
+.btn-submit{
+    opacity: 0;
+    position: absolute;
+}
+.search-kq{
+    text-align: center;
+    padding: 20px;
+}
+.key{
+    font-weight: 600;
+}
 @media screen and (max-width: 768px) {
+    .text-km h2 span{
+        font-size: 20px;
+    }
+    .search-input{
+        top: 100%;
+        width: 100%;
+        left: 0;
+    }
+    .price-detail{
+        display: block;
+        text-align: center;
+    }
+    .price-detail p{
+        font-size: 14px !important;
+    }
+    .card-img-top{
+        height: 180px !important;
+    }
+    .end-price{
+        border: none;
+    }
+    .title-lienquan{ 
+        font-size: 30px;
+    }
    .category-second{
     display: none;
    }

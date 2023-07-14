@@ -4,7 +4,7 @@ const footer = document.querySelector('#footer')
 footer.innerHTML += `
 <div class="footer row">
 <div class="item-footer col-6 col-md-3">
-    <img src="./image/cropped-logo-new-11-512x512-1.png" alt="logo" width="50%">
+    <img src="./image/logo2.jpg" alt="logo" width="100%">
 </div>
 <div class="item-footer col-6 col-md-3">
     <ul>
@@ -28,6 +28,13 @@ footer.innerHTML += `
     <h5>Zostaw kontaktowy adres e-mail</h5>
     <input type="text"  placeholder="Wprowadź swój email..">
     <button>Wysłać</button>
+    <div class="img-pttt">
+      <img src="/image/carte_bleue.png"/>
+      <img src="/image/visa.png"/>
+      <img src="/image/master_card.png"/>
+      <img src="/image/american_express.png"/>
+      <img src="/image/paypal.png"/>
+    </div>
     <p>W pierwszej kolejności udostępniamy nowe produkty, promocje i wiadomości branżowe osobom z wewnątrz.</p>
 </div>
 </div>
@@ -51,6 +58,13 @@ buttonSend.addEventListener('click', () => {
       .then(response => response.json())
       .then(result => {
         console.log('Data sent successfully:', result);
+        Swal.fire(
+          "Powodzenie",
+          "E-mail został do nas wysłany, skontaktujemy się z Tobą tak szybko, jak to możliwe",
+          "success"
+        ).then(() => {
+          window.location.href = "index.html"; // Chuyển hướng đến trang login
+        });
         // Thực hiện các hành động khác sau khi dữ liệu được gửi thành công
       })
       .catch(error => {

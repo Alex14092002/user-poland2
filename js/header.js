@@ -19,7 +19,7 @@ function giohang(id, ten, gia, hinh , quantity , gia2  ){
     cart.push({
       id:id,
       name:ten,
-      price:gia * quantity,
+      price:gia*quantity,
       Singleprice : gia,
       price2 : gia2 * quantity,
       img1:hinh,
@@ -39,22 +39,32 @@ function giohang(id, ten, gia, hinh , quantity , gia2  ){
 }
 const header = document.querySelector('#header')
 
+const keySearch = ()=>{
+  console.log('thành công');
+}
+
+
+
 header.innerHTML += `
-<div class="header-top ">
-        <h1>Przy zamówieniach powyżej 1000 zł (netto) dostawa gratis oraz logo gratis</h1>
-      </div>
+
 <nav>
+<div class="search-input active-search">
+  
+    <input class="valueSearch" type="text"  placeholder="Wpisz szukany tekst..."/>
+   
+</div>
+<button class="btn-submit">Submit</button>
   <div class="navbar">
     <i class="bx bx-menu"></i>
     <div class="logo">
       <a href="index.html">
-        <img src="./image/cropped-logo-new-11-512x512-1.png" alt="" width="60px">
+        <img src="./image/logo2.jpg" alt="" width="150px">
       </a>
     </div>
     <div class="nav-links">
       <div class="sidebar-logo">
         <span class="logo-name">
-          <img src="./image/cropped-logo-new-11-512x512-1.png" alt="logo" width="60px">
+          <img src="./image/logo2.jpg" alt="logo" width="150px">
         </span>
         <i class="bx bx-x"></i>
       </div>
@@ -109,6 +119,12 @@ header.innerHTML += `
         <span>${cart.length}</span>
       </a>
     </div>
+    <div class="search">
+    <button class='btn-search'>
+    <i class="fa fa-search" aria-hidden="true"></i>
+    </button>
+    
+  </div>
   </div>
 </nav>
 
@@ -116,10 +132,25 @@ header.innerHTML += `
 
 
 
+const inputSearch = document.querySelector('.search-input') 
+const btnSearch = document.querySelector('.btn-search')
 
+btnSearch.addEventListener('click', ()=>{
+  inputSearch.classList.toggle('active-search')
+})
 
+const btnSubmit = document.querySelector('.btn-submit')
+const valueSearch = document.querySelector('.valueSearch')
 
+btnSubmit.addEventListener('click' , ()=>{
+  console.log(valueSearch.value);
+  localStorage.setItem("keySearch", JSON.stringify(valueSearch.value));
+  window.location.href = "search.html"
+})
 
-
-
-
+valueSearch.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    btnSubmit.click();
+  }
+});
