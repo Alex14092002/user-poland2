@@ -18,9 +18,9 @@ footer.innerHTML += `
     <ul>
         
         <li>konto bankowe: 51 1240 1503 1111 0011 1065 1719</li>
-        <li>Tel : 787162641</li>
-        <li>Gmail : agdmulti1@gmail.com</li>
-        <li>Adress : Marywilska 44 : Box : B89</li>
+        <li>Tel: 787162641</li>
+        <li>Gmail: agdmulti1@gmail.com</li>
+        <li>Adress: Marywilska 44 : Box : B89</li>
     </ul>
 </div>
 
