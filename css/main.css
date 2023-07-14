@@ -1086,7 +1086,11 @@ button {
     .text-km h2 span{
         font-size: 20px;
     }
-    
+    .search-input{
+        top: 100%;
+        width: 100%;
+        left: 0;
+    }
     .price-detail{
         display: block;
         text-align: center;
@@ -1440,6 +1444,17 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 5px;
     margin-bottom: 20px;
     width: 100%;
+}
+@media(min-width : 1400px){
+    .search-input{
+        
+        top: 20% !important;
+        
+        left: 29% !important;
+        width: 49% !important;
+        
+       
+    }
 }
 @media (max-width: 800px) {
     .itemtype{
