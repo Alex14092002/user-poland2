@@ -1445,6 +1445,33 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 20px;
     width: 100%;
 }
+.loading-dots {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  
+  .loading-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    margin: 0 3px;
+    animation: loading-animation 1s infinite ease-in-out;
+  }
+  
+  @keyframes loading-animation {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+  
 @media(min-width : 1400px){
     .search-input{
         
